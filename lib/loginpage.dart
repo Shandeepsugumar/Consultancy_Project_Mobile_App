@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ssm/home_page_user.dart';
 import 'package:ssm/signup_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -63,8 +64,10 @@ class LoginPage extends StatelessWidget {
               SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                  // Handle login logic
-                },
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),// for testing
+                  );                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue[900],
                   shape: RoundedRectangleBorder(
